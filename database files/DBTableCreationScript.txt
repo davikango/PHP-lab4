@@ -1,0 +1,83 @@
+SSH Secure Shell 3.2.9 (Build 283)
+Copyright (c) 2000-2003 SSH Communications Security Corp - http://www.ssh.com/
+
+This copy of SSH Secure Shell is a non-commercial version.
+This version does not include PKI and PKCS #11 functionality.
+
+
+VOLGENAU SCHOOL LABORATORIES.
+For account information see:
+http://labs.vse.gmu.edu/reference/faq_iteaccount.htm#account
+
+*********************** IMPORTANT NOTICE *************************
+Zeus uses the campus kerberos database. If you cannot login, go to 
+password.gmu.edu and reset your password wait 10 minutes then try again.
+
+
+Last login: Tue Jul 19 12:01:01 2016 from 192.5.215.186
+****
+
+   For support, send email to system@vse.gmu.edu from your GMU email account
+   or during normal business hours call extension 1515.
+
+****
+
+Notice orphaned processes will be subject to 4hrs run time max.
+
+Use the command 'module avail' to list available modules.
+Use the command 'module add <module_name>' to use module <module_name>.
+Default Modules: 
+  1) dot                         7) oracle
+  2) cplex/12.6.1.0              8) java/1.8.0_66
+  3) clisp/2.49                  9) CUnit
+  4) mysql                      10) SimGrid/3.12
+  5) python/2.7.2               11) matlab/classroom/R2016a
+  6) mentor_graphics/modeltech  12) default-environment
+
+dvacasot@zeus-0:~$ mysql -h helios.ite.gmu.edu -u dvacasot -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 41806
+Server version: 5.6.28-0ubuntu0.14.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| dvacasot           |
++--------------------+
+2 rows in set (0.36 sec)
+
+mysql> USE dvacasot;
+Database changed
+mysql> SELECT DATABASE();
++------------+
+| DATABASE() |
++------------+
+| dvacasot   |
++------------+
+1 row in set (0.00 sec)
+
+
+mysql> CREATE TABLE comments (MemberID SMALLINT PRIMARY KEY AUTO_INCREMENT,Name VARCHAR(50),Email VARCHAR(50), Comment VARCHAR(100));
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> DESCRIBE comments;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| MemberID | smallint(6)  | NO   | PRI | NULL    | auto_increment |
+| Name     | varchar(50)  | YES  |     | NULL    |                |
+| Email    | varchar(50)  | YES  |     | NULL    |                |
+| Comment  | varchar(100) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+4 rows in set (0.07 sec)
